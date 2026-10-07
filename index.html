@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MyPager · a pager for your desk</title>
+<meta name="description" content="A small always-on screen for your calendar, tasks and weather, kept up to date by the MyPager iPhone app.">
+<style>
+  :root {
+    color-scheme: light dark;
+    /* The pager's reflective panel: off-white paper, near-black ink. */
+    --bg: #E8E6DE; --surface: #F4F3EE; --text: #161616; --muted: #55534D; --rule: rgba(22, 22, 22, .14);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #141413; --surface: #1E1E1C; --text: #E8E6DE; --muted: #A3A097; --rule: rgba(232, 230, 222, .16); }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: var(--bg); color: var(--text);
+    font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    padding: max(24px, env(safe-area-inset-top)) 16px max(40px, env(safe-area-inset-bottom));
+  }
+  main { max-width: 680px; margin: 0 auto; }
+  a { color: var(--text); }
+  .wordmark {
+    display: inline-block; margin: 8px 0 32px; text-decoration: none; color: var(--text);
+    font: 700 24px/1 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: 0.04em;
+  }
+  h1 { font-size: 34px; line-height: 1.15; letter-spacing: -0.02em; margin: 0 0 8px; }
+  h2 { font-size: 21px; line-height: 1.25; margin: 36px 0 8px; }
+  p, ul { margin: 0 0 14px; }
+  ul { padding-left: 22px; }
+  li { margin: 0 0 8px; }
+  .meta { color: var(--muted); margin-bottom: 28px; }
+  .lede { font-size: 20px; line-height: 1.45; }
+  .card { background: var(--surface); border-radius: 16px; padding: 22px 20px; margin: 28px 0; }
+  .card p:last-child { margin-bottom: 0; }
+  footer {
+    margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--rule);
+    color: var(--muted); font-size: 15px;
+  }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <a class="wordmark" href="./" aria-label="MyPager home">MYPAGER</a>
+  <h1>A pager for your desk.</h1>
+  <p class="lede">MyPager is a small always-on screen that shows your next meetings, today's tasks and the weather. The MyPager iPhone app reads your Google Calendar and Google Tasks and keeps the screen up to date over Bluetooth.</p>
+  <div class="card">
+    <p>MyPager is a personal project. The device is a Waveshare ESP32-S3 board with a 4.2-inch reflective LCD, and the app is distributed through TestFlight, not the App Store.</p>
+  </div>
+  <p>The app has read-only access to the Google accounts you connect, and that data stays between Google, your iPhone and your pager. The <a href="privacy/">privacy policy</a> has the details.</p>
+  <p>Questions: <a href="mailto:ole.kolo.pro@gmail.com">ole.kolo.pro@gmail.com</a>.</p>
+  <footer>
+    <a href="./">Home</a> · <a href="privacy/">Privacy</a> · <a href="mailto:ole.kolo.pro@gmail.com">ole.kolo.pro@gmail.com</a>
+  </footer>
+</main>
+</body>
+</html>
